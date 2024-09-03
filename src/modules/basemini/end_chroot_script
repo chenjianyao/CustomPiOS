@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# base 纯净版
-########
-set -ex
-
-###############################
-
-rm -f /common.sh
