@@ -32,7 +32,7 @@ while getopts "hl:" opt; do
 	esac
 done
 shift $(($OPTIND - 1))
-
+echo "================================================================"
 echo "Distro path: ${DIST_PATH}"
 echo "CustomPiOS path: ${CUSTOM_PI_OS_PATH}"
 echo "================================================================"
