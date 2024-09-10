@@ -563,7 +563,7 @@ function set_config_var() {
 #====================================================================#
 
 # 复制image指定的文件到临时目录
-function custompios_tmp_export() {
+function export_by_cp() {
   local file=${1}
    
   mkdir -p /tmp/export
@@ -571,7 +571,7 @@ function custompios_tmp_export() {
 }
 
 # 移动image指定的文件到临时目录
-function custompios_tmp_export_mv() {
+function export_by_mv() {
   local file=${1}
    
   mkdir -p /tmp/export
