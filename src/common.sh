@@ -557,3 +557,23 @@ function set_config_var() {
   # See https://github.com/RPi-Distro/raspi-config/blob/master/raspi-config#L231
   raspi-config nonint set_config_var $1 $2 /boot/config.txt
 }
+
+#====================================================================#
+#===============================ADD==================================#
+#====================================================================#
+
+# 复制image指定的文件到临时目录
+function custompios_tmp_export() {
+  local file=${1}
+   
+  mkdir -p /tmp/export
+  cp -r ${file} /tmp/export/
+}
+
+# 移动image指定的文件到临时目录
+function custompios_tmp_export_mv() {
+  local file=${1}
+   
+  mkdir -p /tmp/export
+  mv -f ${file} /tmp/export/
+}
