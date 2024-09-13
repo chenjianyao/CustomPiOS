@@ -52,7 +52,7 @@ pushd "${DIST_PATH}"
         EXTRA_FLAGS="--sha256"
     fi
     
-    bash -x ${CUSTOM_PI_OS_PATH}/release ${EXTRA_FLAGS} "${WORKSPACE_SUFFIX}"
+    bash ${CUSTOM_PI_OS_PATH}/release ${EXTRA_FLAGS} "${WORKSPACE_SUFFIX}"
     
     if [ "${RPI_IMAGER}" == "yes" ]; then
         if [ -z "${CUSTOM_PI_OS_PATH}" ];then
