@@ -87,6 +87,14 @@ function execute_chroot_script() {
     rm -rf custompios_export
   fi
   
+  # Handle tmp exported items
+  if [ -d "tmp/export" ]; then
+    echo "Exporting files from chroot"
+    # mv files to ${BASE_WORKSPACE}/export
+    mv -f tmp/export ${BASE_WORKSPACE}/
+    rm -rf tmp/export
+  fi
+
   #cleanup
   rm chroot_script
   if [ -d "filesystem" ]; then
