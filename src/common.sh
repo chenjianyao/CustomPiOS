@@ -577,3 +577,8 @@ function export_by_mv() {
   mkdir -p /tmp/export
   mv -f ${file} /tmp/export/
 }
+
+# 打印提示消息
+function print_status() {
+    echo_green "\n\n###### $1"
+}
