@@ -580,5 +580,5 @@ function export_by_mv() {
 
 # 打印提示消息
 function print_status() {
-    echo_green "\n\n###### $1"
+    echo_green "###### $1"
 }
