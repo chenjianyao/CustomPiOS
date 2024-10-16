@@ -4,7 +4,6 @@
 # Written by asdfinit
 # GPL V3
 
-set -x
 set -e
 
 source /common.sh

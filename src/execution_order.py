@@ -63,7 +63,6 @@ if __name__ == "__main__":
         
     with open(args.output_script, "w+") as f:
         f.write("#!/usr/bin/env bash\n")
-        f.write("set -x\n")
         f.write("set -e\n")
         parse(args.modules.replace(" ", ""), lambda module, state: handle(module, state, f))
         

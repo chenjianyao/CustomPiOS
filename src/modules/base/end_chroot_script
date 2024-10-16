@@ -4,7 +4,7 @@
 # Written by Guy Sheffer <guysoft at gmail dot com>
 # GPL V3
 ########
-set -ex
+set -e
 
 if [ -n "$BASE_APT_PROXY" ]
 then

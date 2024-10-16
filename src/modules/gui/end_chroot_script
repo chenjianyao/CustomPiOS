@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # VlcOS generation script
 ########
-set -x
 set -e
 
 source /common.sh

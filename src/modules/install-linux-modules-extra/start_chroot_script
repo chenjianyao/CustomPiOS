@@ -7,7 +7,6 @@
 
 
 # Source error handling, leave this in place
-set -x
 set -e
 
 source /common.sh

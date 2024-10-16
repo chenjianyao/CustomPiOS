@@ -189,7 +189,7 @@ pushd $BASE_WORKSPACE
     CHROOT_SCRIPT=${BASE_WORKSPACE}/chroot_script
     python3 ${CUSTOM_PI_OS_PATH}/execution_order.py "${MODULES}" ${CHROOT_SCRIPT}
     export -f execute_chroot_script
-    bash -x "${CHROOT_SCRIPT}"
+    bash "${CHROOT_SCRIPT}"
     
     
     # if building a variant, execute its post-chroot script

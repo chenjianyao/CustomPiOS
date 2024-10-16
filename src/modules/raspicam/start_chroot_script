@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x
 set -e
 # This module enables the raspicam
 echo "# enable raspicam" >> /"${BASE_BOOT_MOUNT_PATH}"/config.txt

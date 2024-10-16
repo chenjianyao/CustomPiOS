@@ -6,7 +6,7 @@
 ########
 
 ## Source error handling, leave this in place
-set -xe
+set -e
 
 # Source CustomPIOS common.sh
 source /common.sh

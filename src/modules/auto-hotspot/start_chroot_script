@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x
 set -e
 # CustomPiOS auto-hotspot module
 # Script sets up an automatic hotspot if no wifi is found

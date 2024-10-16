@@ -5,6 +5,5 @@
 # GPL V3
 ########
 
-set -x
 set -e
 

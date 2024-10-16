@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x
 set -e
 # CustomPiOS usage-statistics module
 # Send anonymous statistics of a distro
