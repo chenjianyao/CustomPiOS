@@ -76,7 +76,7 @@ function execute_chroot_script() {
   
   # Handle exported items
   if [ -d "custompios_export" ]; then
-    echo "Exporting files from chroot"
+    echo "Exporting files from chroot, custompios_export"
     echo "List of archies to create:"
     ls custompios_export
     # Tar files listed in export
@@ -88,11 +88,12 @@ function execute_chroot_script() {
   fi
   
   # Handle tmp exported items
-  if [ -d "tmp/export" ]; then
-    echo "Exporting files from chroot"
-    # mv files to ${BASE_WORKSPACE}/export
-    mv -f tmp/export ${BASE_WORKSPACE}/
-    rm -rf tmp/export
+  if [ -d "custompios_export_file" ]; then
+    echo "Exporting files from chroot, custompios_export_file"
+
+    cp -r custompios_export_file/* ${BASE_WORKSPACE}/
+
+    rm -rf custompios_export_file
   fi
 
   #cleanup
