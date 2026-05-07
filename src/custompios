@@ -209,6 +209,9 @@ pushd $BASE_WORKSPACE
     if [ "$BASE_IMAGE_RASPBIAN" == "yes" ]; then
       restoreLd
     fi
+
+    ### 移除根目录下 common.sh
+    rm -rf common.sh
   popd
   
   # unmount first boot, then root partition
@@ -223,3 +226,4 @@ pushd $BASE_WORKSPACE
 popd
 
 echo_green -e "\nBUILD SUCCEEDED @ $(date)!\n"
+
