@@ -51,6 +51,15 @@ function execute_chroot_script() {
     rm -rf custompios_export
   fi
   
+  # Handle tmp exported items
+  if [ -d "custompios_export_file" ]; then
+    echo "Exporting files from chroot, custompios_export_file"
+    echo "List of archies to create:"
+    ls custompios_export_file
+    # Move files 
+    mv custompios_export_file/* ${BASE_WORKSPACE}/
+  fi
+
   #cleanup
   rm chroot_script
   if [ -d "filesystem" ]; then
@@ -186,6 +195,9 @@ pushd "${BASE_WORKSPACE}"
     if [ "$BASE_IMAGE_RASPBIAN" == "yes" ]; then
       restoreLd
     fi
+
+    ### 移除根目录下 common.sh
+    rm -rf common.sh
   popd
   
   # unmount first boot, then root partition

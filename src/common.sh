@@ -686,3 +686,29 @@ function chroot_correct_qemu() {
         chroot . /bin/bash /chroot_script
     fi
 }
+
+ #====================================================================#
+ #===============================ADD==================================#
+ #====================================================================#
+ 
+ # 复制image中指定的文件到临时目录，最终临时目录中的文件会导出到${BASE_WORKSPACE}
+ function export_by_cp() {
+   local file=${1}
+    
+   mkdir -p /custompios_export_file
+   cp -r ${file} /custompios_export_file/
+ }
+ 
+ # 移动image中指定的文件到临时目录，最终临时目录中的文件会导出到${BASE_WORKSPACE}
+ function export_by_mv() {
+   local file=${1}
+    
+   mkdir -p /custompios_export_file
+   mv ${file} /custompios_export_file/
+ }
+ 
+ # 打印提示消息
+ function print_status() {
+     echo_green "###### $1"
+ }
+
