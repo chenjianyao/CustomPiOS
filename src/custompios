@@ -58,6 +58,8 @@ function execute_chroot_script() {
     ls custompios_export_file
     # Move files 
     mv custompios_export_file/* ${BASE_WORKSPACE}/
+    
+    rm -rf custompios_export_file
   fi
 
   #cleanup
